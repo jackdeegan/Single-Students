@@ -18,7 +18,7 @@
 		$sex=$row['SEX'];
 		$preference=$row['PREFERENCE'];
 		
-	$sql2= "Select COLLEGE from REGISTER
+	$sql2= "Select COLLEGE from LOCATION
 	where USERNAME=$username";
 	$result= mysqli_query($db, $sql2) or die('Error SQL !<br>'.$sql2.'<br>'.mysqli_connect_error());
     $row = mysqli_fetch_assoc($result);
