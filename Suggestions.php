@@ -54,5 +54,5 @@
         $image=$row3['IMAGE'];
 	}
 
-	
+	mysqli_close($db);	
 ?>
