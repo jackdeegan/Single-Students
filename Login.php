@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors',1);
-require 'php/Connect.php';
+require 'Connect.php';
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
