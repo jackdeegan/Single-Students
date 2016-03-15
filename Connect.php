@@ -1,8 +1,7 @@
 <?php
-$server= "localhost";
-$user="root";
-$password="";
+$server= "193.1.101.7:3307";
+$user="group19";
+$password="cBlAP4s1a";
 $dbname="group19DB";
-//$port="3307";
 
 $db = mysqli_connect($server,$user,$password, $dbname) or die("Unable to connect to server.");

@@ -1,14 +1,8 @@
 <?php
 	ini_set('display_errors',1);
 
-	//$server= "localhost";
-	$server= "193.1.101.7:3307";
-	$user="group19";
-	$password="cBlAP4s1a";
-	$dbname="group19DB";
-	
+	require 'Connect.php';
 
-	$db = mysqli_connect($server,$user,$password, $dbname) or die("Unable to connect");
 	$sql1= "Select NAME,DOB,SEX,PREFERENCE from REGISTER
 	where USERNAME=$username";
 	$result= mysqli_query($db, $sql1) or die('Error SQL !<br>'.$sql1.'<br>'.mysqli_connect_error());
