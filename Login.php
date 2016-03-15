@@ -6,21 +6,40 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $error = "Invalid username/password";
-    mysqli_select_db($db,"REGISTER");
+    $found_user = false;
     if (!empty($username) && !empty($password)) {
-        $query = ("SELECT USERNAME, PASSWORD, ADMIN FROM REGISTER WHERE USERNAME = '$username'");
+        echo "fields not empty";
+        mysqli_select_db($db, "ADMIN");
+        $query = ("SELECT USERNAME, PASSWORD FROM ADMIN WHERE USERNAME = '$username'");
         if ($query_run = mysqli_query($db, $query)) {
             $query_num_rows = mysqli_num_rows($query_run);
-            if ($query_num_rows==0) {
+            if ($query_num_rows == 0) {
                 header("Location: Home.html");
             } else if ($query_num_rows = 1) {
                 $query_array = mysqli_fetch_array($query_run);
                 if (password_verify($password, $query_array[1])) {
                     session_start();
-                    if ($query_array[2] == 0)
-                        $admin = false;
-                    else
-                        $admin = true;
+                    $admin = true;
+                    $_SESSION['username'] = $username;
+                    $_SESSION['admin'] = $admin;
+                    $found_user = true;
+                    header("Location: AdminPage.html");
+                }
+            }
+        }
+    }
+    if ($found_user == false) {
+        mysqli_select_db($db, "REGISTER");
+        $query = ("SELECT USERNAME, PASSWORD FROM REGISTER WHERE USERNAME = '$username'");
+        if ($query_run = mysqli_query($db, $query)) {
+            $query_num_rows = mysqli_num_rows($query_run);
+            if ($query_num_rows == 0) {
+                header("Location: Home.html");
+            } else if ($query_num_rows = 1) {
+                $query_array = mysqli_fetch_array($query_run);
+                if (password_verify($password, $query_array[1])) {
+                    session_start();
+                    $admin = false;
                     $_SESSION['username'] = $username;
                     $_SESSION['admin'] = $admin;
                     header("Location: UserProfile.html");
@@ -29,9 +48,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 }
             }
         }
-} else {
-    echo 'You must supply a username and password.';
+    }
 }
-}
-
 mysqli_close($db);
