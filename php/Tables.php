@@ -1,7 +1,7 @@
 <?php
 	ini_set('display_errors',1);
 
-	require 'Connect.php';
+	require 'php/Connect.php';
 
 	if (!$db) {
 		die ("No connection to server");
