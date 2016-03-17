@@ -30,28 +30,50 @@
         <div class="container">
             <div class="row">
                 <div class="container col-xs-9">
-                    <div class="row user-page-borders">
-                        <div class="user-profile-pic">
-                            <img class="user-profile-pic" src="images/i02.png" alt="Semi decent photo" />
-                        </div>
+                    <!-- user-page-sizelock is just to hold a minimum size -->
+                    <div class="row user-page-borders user-page-sizelock">
+                            <h3 style="margin: 0px 0px 10px">$firstname $lastname</h3>
+                            <img class="col-xs-5 user-profile-pic" src="images/i02.png" alt="Semi decent photo" />
+
 
                         <!-- This can be used to give information about the person.
                         Or it can be their bio -->
-                        <div class="information">
-                            <h3>Information about Example Person</h3>
-                            <p>
-                                When I was a wee child I was hit by a very fast bus. After that I awoke in hospital where I was met by a kind doctor with a mad dream to be the greatest dancer that ever lived. So he danced and just left after that. RIP me tho.
-                            </p>
+
+                        <!-- This has the gammiest workaround atm using break tags, might find a better way to list information with gap, perhaps a table. -->
+                        <div class="col-xs-4" style="border-right:1px solid grey">
+                            Born on <br><br>
+                            Goes to <br><br>
+                            From <br><br><br>
+                            Gender <br><br>
+                            Seeking <br><br>
+                            Likes <br><br><br><br><br><br>
+
+                        </div>
+                        <div class="col-xs-3">
+                            <i>$date</i><br><br>
+                            <i>$college</i><br><br>
+                            <i>$town</i>,<br>
+                            <i>$county</i><br><br>
+                            <i>$sex</i><br><br>
+                            <i>$preference</i><br><br>
+                            <i>$likes1</i><br>
+                            <i>$likes2</i><br>
+                            <i>$likes3</i><br>
+                            <i>$likes4</i><br>
+                            <i>$likes5</i><br>
                         </div>
                     </div>
 
                     <!-- **************Space below the first block************** -->
-                    <div class="row user-page-borders">
-                        <h3>Pure filler space</h3>
-                        <p>
-                            I seriously dunno what to even write in here
-                        </p>
+                    <div class="row user-page-borders user-page-sizelock">
+                        <h3>Likes</h3>
+                        $like1 $like2 $like3 $like4 and $like5
+
+                        <h3>Other info?</h3>
+                        We have a lot of space and I am not sure what to fill it with
                     </div>
+
+
                 </div>
                 <!-- ***************************************************************** -->
                 <!-- Below this is the Sidebar, above is the users profile -->
