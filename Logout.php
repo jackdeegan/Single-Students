@@ -1,4 +1,4 @@
 <?php
 session_start();
 session_destroy();
-header("Location: Home.html");
+header("Location: Home.php");

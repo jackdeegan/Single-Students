@@ -1,5 +1,8 @@
+<?php
+include 'LoginCheck.php';
+checkUser();
+?>
 <html>
-
 <head>
     <title>Edit Profile| Single Students</title>
 
@@ -18,14 +21,14 @@
         <!-- This wrapper will contain everything to keep it aligned -->
         <div id = "navbar">
 				<ul>
-					<li><a href = "UserProfile.html" />Profile <span class = "glyphicon glyphicon-user"></span></a></li>
-					<li><a href = "EditProfile.html" />Edit Profile <span class = "glyphicon glyphicon-pencil"></span></a></li>
-					<li><a href = "Matches.html" />Matches <span class = "glyphicon glyphicon-heart-empty"></span></a></li>
-					<li><a href = "Requests.html" />Requests <span class = "glyphicon glyphicon-question-sign"></span></a></li>
-					<li><a href = "Search.html" />Search <span class = "glyphicon glyphicon-search"></span></a></li>
+					<li><a href = "UserProfile.php" />Profile <span class = "glyphicon glyphicon-user"></span></a></li>
+					<li><a href = "EditProfile.php" />Edit Profile <span class = "glyphicon glyphicon-pencil"></span></a></li>
+					<li><a href = "Matches.php" />Matches <span class = "glyphicon glyphicon-heart-empty"></span></a></li>
+					<li><a href = "Requests.php" />Requests <span class = "glyphicon glyphicon-question-sign"></span></a></li>
+					<li><a href = "Search.php" />Search <span class = "glyphicon glyphicon-search"></span></a></li>
 					<ul style="float:right;list-style-type:none;">
 						<li><img src = "images/logo-flat.png" height = "50"/></li>
-						<li><a href = "Home.html" />Logout <span class = "glyphicon glyphicon-log-out"></span></a></li>
+						<li><a href = "Logout.php" />Logout <span class = "glyphicon glyphicon-log-out"></span></a></li>
 					</ul>
 				</ul>
 		</div>

@@ -1,3 +1,7 @@
+<?php
+include 'LoginCheck.php';
+checkUser();
+?>
 <html>
 <body>
 

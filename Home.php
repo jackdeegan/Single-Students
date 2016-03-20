@@ -1,3 +1,7 @@
+<?php
+include 'LoginCheck.php';
+forHomeAndRegister();
+?>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -12,7 +16,7 @@
 		<input type = "password" class="inputs" placeholder = "password" name = "password"/>
 		<br>
 		<button onclick="location.href = 'Login.php';" type = "submit" name = "submit">Login</button>
-		<button onclick="location.href = 'Register.html';" type = "button">Register</button></center>
+		<button onclick="location.href = 'Register.php';" type = "button">Register</button></center>
 	</form>
 	</body>
 </html>
