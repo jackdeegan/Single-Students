@@ -463,7 +463,7 @@ checkUser();
                         <div class="col-md-8 form-group">
                             <select name="eyes" id="eyes" class="optionlist form-control">
                                 <option value="blank"></option>
-								<option value="brown">Brown</option>
+				<option value="brown">Brown</option>
                                 <option value="blue">Blue</option>
                                 <option value="green">Green</option>
                                 <option value="grey">Grey</option>
@@ -480,14 +480,14 @@ checkUser();
                         <div class="col-md-8 form-group">
                             <select name="haircolour" id="hair" class="optionlist form-control">
                                 <option value="blank"></option>
-								<option value="black">Black</option>
+				<option value="black">Black</option>
                                 <option value="brown">Brown</option>
                                 <option value="darkbrown">Dark Brown</option>
                                 <option value="lightbrown">Light Brown</option>
                                 <option value="blond">Blond</option>
                                 <option value="darkblond">Dark Blond</option>
                                 <option value="lightblond">Light Blond</option>
-								<option value="strawberryblond">Strawberry Blond</option>
+				<option value="strawberryblond">Strawberry Blond</option>
                                 <option value="red">Red</option>
                                 <option value="dyed">Dyed</option>
                                 <option value="bald">Bald</option>
@@ -510,15 +510,15 @@ checkUser();
                         </div>
                     </div>
 					
-					<div class="row">
+		<div class="row">
                         <div class="col-md-4">
                             Body type
                         </div>
                         <div class="col-md-8 form-group">
                             <select name="bodytype" id="bodytype" class="optionlist form-control">
                                 <option value="blank"></option>
-								<option value="slim">Slim</option>
-								<option value="skinny">Skinny</option>
+				<option value="slim">Slim</option>
+				<option value="skinny">Skinny</option>
                                 <option value="athletic">Athletic</option>
                                 <option value="muscular">Muscular</option>
                                 <option value="large">Large</option>
@@ -526,6 +526,15 @@ checkUser();
                                 <option value="average">Average</option>
                                 <option value="fit">Fit</option>
                             </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            Height (cm)
+                        </div>
+						<div class="col-md-8 form-group">
+                            <input class="form-control" type="number" name="height" id = "height">
                         </div>
                     </div>
                 
